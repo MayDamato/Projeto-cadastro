@@ -2,7 +2,7 @@
 <br>
 
 <h2>Esse é um projeto de cadastro de clientes e associação de produtos.</h2>
-<p>Neste projeto foi utilizado HTML, CSS, Javascript. Na elaboração do código JavaScript criei algumas functions, para que exibice o resultado do Nome do Cliente cadastrado e o Produto associado a ele na Aba Cliente.
+<p> Neste projeto, foi utilizado HTML, CSS, Javascript. Na elaboração do código JavaScript criei algumas functions, para que exibisse o resultado do Nome do Cliente cadastrado e o Produto associado a ele na Aba Cliente. Foi realizado o deploy do projeto no site da Netlify.
  
   No código CSS foi utilizado o @media para deixar o site responsivo para telas menores.
 </p>
@@ -18,8 +18,9 @@
 <br>
 Clique no link a baixo para acessar o site:
 <br>
-<a href=</a>
+<a href="https://projetocadastro.netlify.app/"> https://projetocadastro.netlify.app/ </a>
 <br>
 <br> Abaixo temos alguns exemplos de como ficou a reponsividade do projeto:<br>
-  <img src= width="280" height="500">
-  <img src= width="280" height="500">
+
+  <img src="https://github.com/MayDamato/Projeto-cadastro/blob/main/assets/proj.cadastro%20celular.png" width="250" height="500"> <br>
+  <img src="https://github.com/MayDamato/Projeto-cadastro/blob/main/assets/projeto.cadastro%20pc.png" width="400" height="500">
