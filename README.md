@@ -18,8 +18,9 @@
 <br>
 Clique no link a baixo para acessar o site:
 <br>
-<a href=</a>
+<a href="https://projetocadastro.netlify.app/"> https://projetocadastro.netlify.app/ </a>
 <br>
 <br> Abaixo temos alguns exemplos de como ficou a reponsividade do projeto:<br>
-  <img src= width="280" height="500">
-  <img src= width="280" height="500">
+
+  <img src="https://github.com/MayDamato/Projeto-cadastro/blob/main/assets/proj.cadastro%20celular.png" width="250" height="500"> <br>
+  <img src="https://github.com/MayDamato/Projeto-cadastro/blob/main/assets/projeto.cadastro%20pc.png" width="400" height="500">
