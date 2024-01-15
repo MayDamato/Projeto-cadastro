@@ -2,7 +2,7 @@
 <br>
 
 <h2>Esse é um projeto de cadastro de clientes e associação de produtos.</h2>
-<p> Neste projeto, foi utilizado HTML, CSS, Javascript. Na elaboração do código JavaScript criei algumas functions, para que exibisse o resultado do Nome do Cliente cadastrado e o Produto associado a ele na Aba Cliente. Foi realizado o deploy do projeto no site da Netlify.
+<p> Neste projeto, foi utilizado HTML, CSS, Javascript. Na elaboração do código JavaScript criei algumas functions, para que exibisse o resultado do Nome do Cliente cadastrado e o Produto associado a ele na Aba Cliente. Para que acesse as funções o usuário terá que preencher o cadastro e antes de apertar 'continuar' terá que descer até a aba de produto e selecionar um, em seguida retornar e clicar em continuar, após clicado é só ir até a aba de clientes que aparecerá o nome e o produto associado. Foi realizado o deploy do projeto no site da Netlify.
  
   No código CSS foi utilizado o @media para deixar o site responsivo para telas menores.
 </p>
