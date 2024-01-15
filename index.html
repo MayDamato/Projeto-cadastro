@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <!-- fonts -->
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro clientes e associações de produtos</title>
+</head>
+
+<body>
+    <!-- header -->
+
+    <section class="header">
+        <nav class="navbar">
+            <div id="close-navbar" class="fas fa-times"></div>
+
+            <a href="#cadastro">Cadastro</a>
+            <a href="#produtos">Associação</a>
+            <a href="#clientes">Clientes</a>
+
+        </nav>
+
+        <div id="menu-btn" class="menu"></div>
+    </section>
+
+    <!-- header -->
+
+    <!-- home  -->
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Cadastro de clientes e <br> associações de produtos aos mesmos.</h3>
+        </div>
+    </section>
+
+    <!-- home  -->
+
+    <!-- cadastro -->
+
+    <section class="cadastro" id="cadastro">
+        <div class="form">
+            <form action="">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="login-button">
+                        <button><a href="#">Entrar</a></button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cpf">CPF</label>
+                        <input type="number" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Celular</label>
+                        <input type="number" id="number" name="tel" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Confirme sua senha</label>
+                        <input type="password" id="password" name="Confirmpassword" placeholder="Digite sua senha"
+                            required>
+                    </div>
+                </div>
+
+                <div class="active-inputs">
+                    <div class="active-title">
+                        <h6>Ativo</h6>
+                    </div>
+
+                    <div class="active-group">
+                        <div class="active-input">
+                            <input type="radio" id="yes" name="active">
+                            <label for="yes">Sim</label>
+                        </div>
+
+                        <div class="active-input">
+                            <input type="radio" id="no" name="active">
+                            <label for="no">Não</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="continues-button">
+                    <button><a href="#">Continuar</a></button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- cadastro -->
+
+    <!-- associação -->
+
+    <section class="produtos" id="produtos">
+
+        <div class="form-associacao">
+            <form action="#">
+                <div class="associacao" id="associacao">
+                    <div class="produtos-title">
+                        <h6>Produtos</h6>
+                    </div>
+
+                    <div class="input-produtos">
+                        <div class="internet">
+                            <input class="input-produto" type="radio" name="internet">
+                            <label for="text"> Internert banda larga</label>
+                        </div>
+
+                        <div class="tv">
+                            <input class="input-produto" type="radio" name="internet">
+                            <label for="text"> Tv a Cabo</label>
+                        </div>
+
+                        <div class="telefone">
+                            <input class="input-produto" type="radio" name="internet">
+                            <label for="text"> Linha Telefônica</label>
+                        </div>
+
+                        <div class="link">
+                            <input class="input-produto" type="radio" name="internet">
+                            <label for="text"> Link Dedicado</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- associação -->
+
+    <!-- clientes -->
+    <section class="clientes" id="clientes">
+        <div class="clientes-title">
+            <h6> Clientes </h6>
+        </div>
+
+        <div class="dados">
+            <form action="#" class="dados-clientes" id="dados-clientes">
+                <div class="nome" id="nome">
+                    <label for="text"> Nome </label>
+                    <input type="text" name="nome">
+                </div>
+
+                <div class="associado" id="associado">
+                    <label for="text"> Produto Associado </label>
+                    <input type="text" name="associado">
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <!-- clientes -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            var cadastroForm = document.querySelector('.cadastro form');
+    
+            
+            cadastroForm.addEventListener('submit', function (event) {
+                event.preventDefault(); 
+    
+                
+                var nome = document.getElementById('name').value;
+                var produtoAssociado = obterProdutoAssociado();
+    
+               
+                exibirDadosClientes(nome, produtoAssociado);
+            });
+    
+            
+            function obterProdutoAssociado() {
+                var produtosRadio = document.querySelectorAll('.input-produto:checked');
+                return produtosRadio.length > 0 ? produtosRadio[0].nextElementSibling.textContent.trim() : '';
+            }
+    
+            
+            function exibirDadosClientes(nome, produtoAssociado) {
+                var nomeInput = document.querySelector('.clientes form [name="nome"]');
+                var associadoInput = document.querySelector('.clientes form [name="associado"]');
+    
+                nomeInput.value = nome;
+                associadoInput.value = produtoAssociado;
+            }
+        });
+    </script>
+    
+</body>
+
+</html>
